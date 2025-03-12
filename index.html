@@ -19,28 +19,37 @@
         <div class="logo">
         </div>
         <nav>
-            <a href="#">HOME</a>
-            <a href="#our-profile">OUR PROFILE</a>
-            <a href="">MY TOOLKIT</a>
-            <a href="">MESSAGE US</a>
+            <a href="#home" class="scrolink">HOME</a>
+            <a href="#our-profile" class="scrolink">OUR PROFILE</a>
+            <a href="#mytoolkit" class="scrolink">MY TOOLKIT</a>
+            <a href="#message-us" class="scrolink">MESSAGE US</a>
         </nav>
+        <!---------Hamburger menu-->
+        <div class="icon-menu">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
     <!-- konten-->
     <main>
         <section id="home">
             <div class="cover-judul">
-                <h2>Hi "User"</h2>
+                <h2>Hi "<span id="username">User</span>"</h2>
                 <h1>I'm Aji Saputra,</h1>
                 <h1>Front-End Developer</h1>
                 <p>Frontend-focused Web Developers build Frontends of Websites and Web Applications that lead to the
                     overall success of the
                     product</p>
                 <div class="cover-cta">
-                    <a href="#">Learn More >></a>
+                    <a href="#our-profile">Learn More >></a>
                 </div>
             </div>
             <div class="cover-img">
-                <img src="assets/product 1.jpg" alt="">
+                <img class="slide" src="assets/product 1.jpg" alt="">
+                <img class="slide" src="assets/product 2.jpg" alt="">
+                <img class="slide" src="assets/product 3.jpg" alt="">
             </div>
         </section>
         <hr>
@@ -58,7 +67,7 @@
                 <h1>Apa yang Saya lakukan?</h1>
                 <p>Saya fokus pada pembuatan landing page sederhana, desain antarmuka website, dan eksperimen dengan
                     HTML serta CSS. Setiap
-                    proyek yang kami buat adalah bagian dari perjalanan kami untuk menjadi web developer yang lebih
+                    proyek yang Saya buat adalah bagian dari perjalanan Saya untuk menjadi web developer yang lebih
                     baik.</p>
             </div>
         </section>
@@ -78,67 +87,151 @@
                     <div class="cover-isi"> <!----paragraft--->
                         <div class="isi">
                             <img src="/assets/vsc.png" alt="">
-                            <h4>VS Code</h4>
+                            <h5>VS Code</h5>
                         </div>
                         <div class="isi">
                             <img src="/assets/github.png" alt="">
-                            <h4>Git hub</h4>
+                            <h5>Git hub</h5>
                         </div>
                         <div class="isi">
                             <img src="/assets/git.png" alt="">
-                            <h4>Git</h4>
+                            <h5>Git</h5>
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="tools-and-software"> <!----isi content 2--->
                     <div class="header"> <!----cover header--->
-                        <img src="/assets/programming.png" alt="">
-                        <h3>Coding & Development</h3>
+                        <img src="/assets/ux.png" alt="">
+                        <h3>Desain & UI/UX</h3>
                     </div>
                     <div class="cover-isi"> <!----paragraft--->
                         <div class="isi">
-                            <img src="/assets/vsc.png" alt="">
-                            <h4>VS Code</h4>
+                            <img src="/assets/figma.png" alt="">
+                            <h5>Figma</h5>
                         </div>
                         <div class="isi">
-                            <img src="/assets/github.png" alt="">
-                            <h4>Git hub</h4>
-                        </div>
-                        <div class="isi">
-                            <img src="/assets/git.png" alt="">
-                            <h4>Git</h4>
+                            <img src="/assets/Canva-logo-PNG-large-size.png" alt="">
+                            <h5>Canva</h5>
                         </div>
                     </div>
                 </div>
 
                 <div class="tools-and-software"> <!----isi content 3--->
                     <div class="header"> <!----cover header--->
-                        <img src="/assets/programming.png" alt="">
-                        <h3>Coding & Development</h3>
+                        <img src="/assets/cloud-network.png" alt="">
+                        <h3>Deployment & Hosting</h3>
                     </div>
                     <div class="cover-isi"> <!----paragraft--->
                         <div class="isi">
-                            <img src="/assets/vsc.png" alt="">
-                            <h4>VS Code</h4>
+                            <img src="/assets/Vercel_favicon.png" alt="">
+                            <h5>Vercel</h5>
                         </div>
                         <div class="isi">
-                            <img src="/assets/github.png" alt="">
-                            <h4>Git hub</h4>
+                            <img src="/assets/https___dev-to-uploads.s3.amazonaws.com_uploads_organization_profile_image_141_786e7a76-3019-4b70-9d33-663ffdbb1d8e.png"
+                                alt="">
+                            <h5>Netlify</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools-and-software"> <!----isi content 4--->
+                    <div class="header"> <!----cover header--->
+                        <img src="/assets/seo.png" alt="">
+                        <h3>SEO & Optimasi</h3>
+                    </div>
+                    <div class="cover-isi"> <!----paragraft--->
+                        <div class="isi">
+                            <img src="/assets/google-analytics.png" alt="">
+                            <h5>Google Analytics</h5>
                         </div>
                         <div class="isi">
-                            <img src="/assets/git.png" alt="">
-                            <h4>Git</h4>
+                            <img src="/assets/lighthouse.png" alt="">
+                            <h5>Lighthouse</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <hr>
 
+        <section id="message-us">
+            <div class="covercontactus">
+                <div class="wrapcontactus">
+                    <div class="judulcontact">Contact Us</div>
+                    <div class="describecontact">Email, call, or fill out the form to find out how AST can solve
+                        your
+                        messaging problems.</div>
+                    <div class="email">
+                        <a href="mailto:ajisaputra1224@gmail.com">ajisaputra1224@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="wrapmorecontact">
+                    <div class="covermorecontact">
+                        <div class="judulmore">Customer Support</div>
+                        <div class="describemore">Our support team is available around the clock to answer any concerns
+                            or
+                            questions you may have</div>
+                    </div>
+                    <div class="covermorecontact">
+                        <div class="judulmore">Feedback and Suggestions</div>
+                        <div class="describemore">We value your feedback and are constantly working to improve Snappy.
+                            Your
+                            input
+                            is critical in shaping the future of
+                            AST
+                        </div>
+                    </div>
+                    <div class="covermorecontact">
+                        <div class="judulmore">Media Inquiries</div>
+                        <div class="describemore">For media related inquiries or press inquiries, please contact us
+                          above  </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coverform">
+                <div class="coverjudulform">
+                    <div class="judulform">Get in Touch</div>
+                    <div class="describeform">You can reach us anytime</div>
+                </div>
+                <form>
+                    <div class="nameandlastname">
+                        <input type="text" name="name" placeholder="First name" required>
+                        <input type="text" name="name" placeholder="Last name" required>
+                    </div>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <div class="coverphone">
+                        <select class="countrycode">
+                            <option value="+62">+62</option>
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                            <option value="+52">+52</option>
+                        </select>
+                        <input type="tel" name="Phone number" placeholder="Phone number" required>
+                    </div>
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                    <p>By contacting us, you agree to our <a href="#">Terms of service</a> and <a href="#">Privacy
+                            Policy</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <div class="coverbacktotop">
+                <a href="#home" class="scrolink">
+                    <img src="/assets/arrow-up (1).png">
+                    <h5>Back To Top</h5>
+                </a>
+        </div>
     </main>
     <!-- footer -->
-    <footer></footer>
+    <footer>
+        <p>&copy;Copyright 2025 by Aji Saputra all rights reserved</p>
+    </footer>
     <script src="/JS/script.js"></script>
 </body>
 

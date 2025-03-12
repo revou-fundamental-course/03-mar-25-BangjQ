@@ -1,257 +1,929 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 /* .......................................scroll Bar.......................... */
 
 /* Mengatur lebar scrollbar */
 ::-webkit-scrollbar {
-    height: 10px; 
-    width: 10px;
+  height: 10px;
+  width: 10px;
 }
 
 /* Track (jalur scrollbar) */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+  background: #f1f1f1;
 }
 
 /* Thumb (bagian yang bisa digeser) */
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    
+  background: #888;
 }
 
 /* Efect Hover Saat klik/scroll pada thumb */
 ::-webkit-scrollbar-thumb:hover {
-    background: #31fa00;
+  background: #31fa00;
 }
 
 /* .......................................Global Style................................... */
 
-body{
-    font-family: "Poppins", sans-serif;
-    background-color: #fcfcfc;
-    overflow-x: hidden;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fcfcfc;
+  overflow-x: hidden;
 }
 
 /* ......................header............... */
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 55px;
-    padding: 0 20px;
-    background: linear-gradient(180deg, #A8A8A8ff, #e2e2e2, #FCFCFCff);
-    border-top: 5px solid black;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  padding: 0 20px;
+  background-color: rgb(1, 119, 1);
 }
 
+nav.slider {
+  transform: translateX(50px);
+  position: fixed;
+  display: flex;
+}
 /* ......................logo................ */
-header .logo{
-    background-image: url(/assets/logo.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-top: 5px;
-    
-    
+header .logo {
+  background-image: url(/assets/logo\ portofolio.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: 5px;
 }
 
 /* ........................navigasi.............. */
-header nav a{
-    font-weight: 600;
-    text-decoration: none;
-    color: black;
-    padding: 8px;
+header nav a {
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  padding: 8px;
 }
 
 /*  */
-header nav a:hover{
-    background-color: #31fa00;
-    border-radius: 10px;
-    transition: all 0.6s ease;
-    color: white;
+header nav a:hover {
+  background-color: #31fa00;
+  border-radius: 10px;
+  transition: all 0.6s ease;
+  color: black;
 }
 
-
-
+/* ...........hamburger menu.......... */
+.icon-menu {
+  display: none;
+}
 
 /* .......................................Main Content................................... */
 
 /* ...........HOME......... */
-#home{
-    display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(480px,1fr));
-    gap: 30px;
-    height: 90vh;
-    /* width: 100vw; */
-    margin: 40px 20px 0 20px;
-    
+#home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 30px;
+  height: 90vh;
+  /* width: 100vw; */
+  margin: 40px 20px 0 20px;
 }
 
 #home .cover-judul {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 40px 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 40px 15px 0 15px;
+}
+
+.typing::after {
+  content: "|";
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* ...........element ke 2 dari container cover-judul.......... */
 #home .cover-judul h1:nth-child(2) {
-    font-size: 36px;
-    color: #31fa00;
+  font-size: 36px;
+  color: #31fa00;
 }
 
 /* ...........element ke 3 dari container cover-judul.......... */
 #home .cover-judul h1:nth-child(3) {
-    margin-bottom: 40px;
-    font-size: 36px;
-    color: black;
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: black;
 }
 
-
-#home .cover-judul p{
-    font-size: 20px;
-    width: auto;
-    text-align: justify;
-    margin-bottom: 40px;
-
+#home .cover-judul p {
+  font-size: 20px;
+  width: auto;
+  text-align: justify;
+  margin-bottom: 40px;
+  text-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
 }
 
-#home .cover-judul .cover-cta{
-    display: flex;
-    width: 100%;
+#home .cover-judul .cover-cta {
+  display: flex;
+  width: 100%;
 }
 
-#home .cover-judul .cover-cta a{
-    text-decoration: none;
-    color: white;
-    background-color: #31fa00;
-    padding: 5px;
-    border-radius: 8px;
-    filter: drop-shadow(6px 4px 9px rgba(0, 0, 0, 0.7));
+#home .cover-judul .cover-cta a {
+  text-decoration: none;
+  color: black;
+  background-color: #31fa00;
+  padding: 5px;
+  border-radius: 8px;
+  filter: drop-shadow(6px 4px 9px rgba(0, 0, 0, 0.7));
 }
 
+#home .cover-judul .cover-cta a:hover {
+  background-color: #259908;
+  color: white;
+}
 
 #home .cover-img {
-    display: flex;
-    align-items: center;
-    margin: 15px;
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  width: 100%;
+  max-width: 500px; /* Sesuaikan ukuran */
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Agar lebih smooth */
+  filter: drop-shadow(5px 5px 15px black);
+}
+
+.slide {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 8px;
+}
+
+.slide.active {
+  opacity: 1;
 }
 
 #home .cover-img img {
-    width: 100%;
+  width: 100;
 }
 
-
-
 /* ................our profile........... */
-#our-profile{
-     display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(480px,1fr));
-    gap: 30px;
-    height: 90vh;
+#our-profile {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 30px;
+  height: 90vh;
 }
 
 #our-profile .cover-img2 {
-    background-image: url(/assets/HTML-Photoroom.png);
-    background-position: center;
-    background-size:contain;
-    background-repeat: no-repeat;
-    width: 80%;
-    margin-left: 100px;
+  background-image: url(/assets/HTML-Photoroom.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  margin-left: 100px;
 }
 
-#our-profile .cover-about{
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-    align-items: center;
+#our-profile .cover-about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  align-items: center;
 }
 
-#our-profile .cover-about h1:nth-child(1){
-    font-size: 30px;
+#our-profile .cover-about h1:nth-child(1) {
+  font-size: 30px;
 }
 
-#our-profile .cover-about h1:nth-child(3){
-    margin-top: 40px;
-    font-size: 30px;
-    color: black;
+#our-profile .cover-about h1:nth-child(3) {
+  margin-top: 40px;
+  font-size: 30px;
+  color: black;
 }
 
-#our-profile .cover-about p{
-    font-size: 20px;
-    width: 80%;
-    text-align: justify;
+#our-profile .cover-about p {
+  font-size: 20px;
+  width: 80%;
+  text-align: justify;
 }
-
 
 /* .......................my toolkit................. */
-#mytoolkit{
-    height: 90vh;
+#mytoolkit {
+  height: 90vh;
 }
 
-#mytoolkit .cover-mytoolkit{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
+#mytoolkit .cover-mytoolkit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
 }
 
-#mytoolkit .cover-tools-and-software{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-self: center;
-    height: 40%;
-    gap: 20px;
-    margin: 40px 20px 0 20px;
+#mytoolkit .cover-mytoolkit h1 {
+  font-size: 30px;
 }
 
-#mytoolkit .cover-tools-and-software .tools-and-software{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    border-radius: 10px;
-    background-color: #31fa00;
-    filter: drop-shadow(6px 4px 9px rgba(0, 0, 0, 0.7));
+#mytoolkit .cover-tools-and-software {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-self: center;
+  height: 40%;
+  gap: 60px;
+  margin: 40px 20px 0 20px;
 }
 
-#mytoolkit .cover-tools-and-software .tools-and-software .header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px;
+#mytoolkit .cover-tools-and-software .tools-and-software {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #e3f2fd;
+  filter: drop-shadow(6px 4px 9px rgba(0, 0, 0, 0.7));
 }
 
-#mytoolkit .cover-tools-and-software .tools-and-software .header img{
-    width: 40px;
-    margin-right: 10px;
+#mytoolkit .cover-tools-and-software .tools-and-software .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  height: 25px;
+  width: 94%;
+  background-color: blueviolet;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-#mytoolkit .cover-tools-and-software .tools-and-software .cover-isi{
-    display: flex;
-    flex-direction: row;
+#mytoolkit .cover-tools-and-software .tools-and-software .header img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+#mytoolkit .cover-tools-and-software .tools-and-software .cover-isi {
+  display: flex;
+  flex-direction: row;
 }
 
 #mytoolkit .cover-tools-and-software .tools-and-software .cover-isi .isi {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 10px 0 10px;
+  padding-bottom: 10px;
 }
 
 #mytoolkit .cover-tools-and-software .tools-and-software .cover-isi .isi img {
-    width: 40px;
+  width: 40px;
+}
+
+/* .......................message us................. */
+#message-us {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #e7f0ff;
+}
+
+#message-us .covercontactus {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  height: 99%;
+  width: 100%;
+  align-items: center;
+  margin: 0 0 10px 30px;
+}
+
+#message-us .covercontactus .wrapcontactus {
+  display: flex;
+  flex-direction: column;
+  /* background-color: chartreuse; */
+  height: 40%;
+  margin-top: 80px;
+}
+
+#message-us .covercontactus .wrapcontactus .judulcontact {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#message-us .covercontactus .wrapcontactus .describecontact {
+  font-size: 19px;
+  font-weight: 400;
+  margin-top: 15px;
+  width: 80%;
+}
+
+#message-us .covercontactus .wrapcontactus .email {
+  margin-top: 20px;
+}
+
+#message-us .covercontactus .wrapcontactus .email a {
+  color: #000000;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#message-us .covercontactus .wrapcontactus .email a:hover {
+  color: blue;
+}
+
+#message-us .covercontactus .wrapmorecontact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+#message-us .covercontactus .wrapmorecontact .covermorecontact {
+  margin-top: 130px;
+}
+
+#message-us .covercontactus .wrapmorecontact .covermorecontact .judulmore {
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+}
+
+#message-us .covercontactus .wrapmorecontact .covermorecontact .describemore {
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 13px;
+  width: 88%;
+}
+
+/* ......................form............ */
+#message-us .coverform {
+  background-color: #ffff;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.3));
+  height: 85%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 100px;
+  top: 35px;
+  padding: 10px;
+  border-radius: 9px;
+}
+
+#message-us .coverform form {
+  display: flex;
+  flex-direction: column;
+  height: 385px;
+  width: 350px;
+  justify-content: center;
+  padding: 5px;
+}
+
+#message-us .coverform .coverjudulform {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+#message-us .coverform .coverjudulform .judulform {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
+}
+
+#message-us .coverform .coverjudulform .describeform {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+input,
+textarea,
+.countrycode {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid black;
+  outline: none;
+}
+
+#message-us .coverform form .nameandlastname {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+#message-us .coverform form .nameandlastname input {
+  width: 53%;
+  text-align: left;
+  height: 30px;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+#message-us .coverform form input[type="email"] {
+  display: flex;
+  max-width: 100%;
+  text-align: left;
+  height: 30px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  padding: 5px 10px;
+}
+
+#message-us .coverform form .coverphone {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  max-width: 100%;
+  padding-bottom: 4px;
+}
+
+#message-us .coverform form .coverphone .countrycode {
+  text-align: center;
+  height: 41px;
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  padding: 5px 6px;
+}
+
+#message-us .coverform form .coverphone input {
+  margin-left: 66px;
+  width: 78%;
+  text-align: left;
+  height: 30px;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+#message-us .coverform form textarea {
+  max-width: 100%;
+  text-align: left;
+  padding: 5px 10px;
+  height: 118px;
+  border-radius: 8px;
+  resize: none;
+}
+
+button {
+  background-color: #0000b9;
+  margin-top: 15px;
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1284ff;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+#message-us .coverform form p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+#message-us .coverform form p a {
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.coverbacktotop {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #e7f0ff;
+}
+
+.coverbacktotop a {
+  display: flex;
+  align-items: center;
+  background-color: blue;
+  margin-right: 20px;
+  padding: 7px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.coverbacktotop a img {
+  width: 35px;
+}
+
+.coverbacktotop a h5 {
+  color: white;
+}
+
+/* ..........................footer................... */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #a8a8a8ff;
 }
 
 /* ..........................hr...................... */
-hr{
+hr {
+  width: 100%;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+}
+
+/* ..........................media query versi Mobile...................... */
+@media screen and (max-width: 480px) {
+  body {
     width: 100%;
-    border: 3px solid rgba(0, 0, 0, 0.7);
-    margin: 20px 0;
+  }
+  /* ................navbar............ */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 0 10px;
+  }
+
+  nav {
+    position: absolute;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    height: 103vh;
+    align-items: flex-start;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    transform: translateX(-50px);
+    transition: all 0.9s;
+    display: none;
+  }
+
+  nav a {
+    position: relative;
+    top: 128px;
+    margin-left: 10px;
+  }
+
+  /* ........................Hamburger menu................. */
+  .icon-menu {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    margin: 0 10px;
+    z-index: 2;
+    background-color: #31fa00;
+    padding: 10px;
+    border-radius: 9px;
+  }
+
+  .icon-menu input {
+    position: absolute;
+    height: 9vh;
+    width: 29px;
+    opacity: 0;
+    top: -18px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .icon-menu span {
+    display: block;
+    height: 4px;
+    width: 29px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.7s;
+  }
+
+  .icon-menu span:nth-child(2) {
+    background-color: black;
+    transform-origin: 0 0;
+  }
+
+  .icon-menu span:nth-child(2)::after {
+    background-color: red;
+  }
+
+  .icon-menu span:nth-child(4) {
+    background-color: black;
+    transform-origin: 0 100%;
+  }
+
+  .icon-menu span:nth-child(4)::before {
+    background-color: red;
+  }
+
+  .icon-menu input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-2px, -4px);
+    background-color: red;
+  }
+
+  .icon-menu input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(1px, 0);
+    background-color: red;
+  }
+
+  .icon-menu input:checked ~ span:nth-child(3) {
+    transform: scale(0);
+  }
+}
+
+/* .....................home.................. */
+@media screen and (max-width: 480px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin: 40px 20px 0 20px;
+  }
+
+  #home .cover-judul {
+    margin: 40px 15px 0 15px;
+  }
+
+  #home .cover-judul h1:nth-child(2) {
+    font-size: 30px;
+  }
+
+  #home .cover-judul h1:nth-child(3) {
+    font-size: 30px;
+  }
+
+  #home .cover-judul p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  #home .cover-judul .cover-cta {
+    display: flex;
+    width: 100%;
+  }
+
+  #home .cover-judul .cover-cta a {
+    padding: 5px;
+  }
+
+  #home .cover-img {
+    margin: 15px 15px 0 15px;
+    width: 100%;
+    max-width: 320px;
+    height: 50%;
+    border-radius: 10px;
+  }
+
+  .slide {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 8px;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+
+  #home .cover-img img {
+    width: 100%;
+  }
+}
+
+/* .....................our profile.................. */
+@media screen and (max-width: 480px) {
+  #our-profile {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    height: auto;
+  }
+
+  #our-profile .cover-img2 {
+    background-image: url(/assets/HTML-Photoroom.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 350px;
+    height: 263px;
+    margin: 15px 15px 0 15px;
+  }
+
+  #our-profile .cover-about {
+    margin-top: 15px;
+  }
+
+  #our-profile .cover-about h1:nth-child(1) {
+    font-size: 30px;
+  }
+
+  #our-profile .cover-about h1:nth-child(3) {
+    font-size: 30px;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #our-profile .cover-about p {
+    font-size: 18px;
+    width: 80%;
+    padding-bottom: 15px;
+  }
+}
+
+/* .....................my toolkit.................. */
+@media screen and (max-width: 480px) {
+  #mytoolkit {
+    height: auto;
+  }
+
+  #mytoolkit .cover-mytoolkit {
+    margin: 15px;
+  }
+
+  #mytoolkit .cover-tools-and-software {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    height: auto;
+    margin: 40px 20px 40px 20px;
+  }
+
+  #mytoolkit .cover-tools-and-software .tools-and-software {
+    width: 100%;
+  }
+
+  #mytoolkit .cover-tools-and-software .tools-and-software .header img {
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  #mytoolkit .cover-tools-and-software .tools-and-software .cover-isi {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #mytoolkit .cover-tools-and-software .tools-and-software .cover-isi .isi {
+    margin: 30px 10px 0 10px;
+  }
+
+  #mytoolkit .cover-tools-and-software .tools-and-software .cover-isi .isi img {
+    width: 40px;
+  }
+}
+
+/* .....................message us.................. */
+@media screen and (max-width: 480px) {
+  #message-us {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+    background-color: #e7f0ff;
+  }
+
+  #message-us .covercontactus {
+    margin: 0 0 10px 0;
+  }
+
+  #message-us .covercontactus .wrapcontactus {
+    margin: 40px 10px 0 10px;
+  }
+
+  #message-us .covercontactus .wrapcontactus .judulcontact {
+    font-size: 30px;
+  }
+
+  #message-us .covercontactus .wrapcontactus .describecontact {
+    font-size: 19px;
+    margin-top: 15px;
+    width: 80%;
+  }
+
+  #message-us .covercontactus .wrapcontactus .email {
+    margin-top: 20px;
+  }
+
+  #message-us .covercontactus .wrapcontactus .email a {
+    font-size: 19px;
+  }
+
+  #message-us .covercontactus .wrapmorecontact {
+    padding-right: 0;
+    position: relative;
+    top: 75%;
+  }
+
+  #message-us .covercontactus .wrapmorecontact .covermorecontact {
+    margin-top: 130px;
+  }
+
+  #message-us .covercontactus .wrapmorecontact .covermorecontact .judulmore {
+    font-size: 12px;
+    width: 85%;
+    text-align: center;
+  }
+
+  #message-us .covercontactus .wrapmorecontact .covermorecontact:nth-child(3),
+  .judulmore {
+    width: 68%;
+  }
+
+  #message-us .covercontactus .wrapmorecontact .covermorecontact .describemore {
+    font-size: 10px;
+    margin: 10px 10px 0 10px;
+    width: 88%;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  #message-us .coverform {
+    height: auto;
+    width: auto;
+    position: relative;
+    top: -60%;
+    left: 0;
+    padding: 10px;
+  }
+
+  #message-us .coverform form {
+    height: auto;
+    width: 355px;
+    padding: 5px;
+  }
+
+  #message-us .coverform .coverjudulform .judulform {
+    font-size: 30px;
+  }
+
+  #message-us .coverform .coverjudulform .describeform {
+    font-size: 19px;
+  }
+
+  #message-us .coverform form .nameandlastname input {
+    width: 100%;
+  }
+
+  #message-us .coverform form input[type="email"] {
+    max-width: 100%;
+  }
+
+  #message-us .coverform form .coverphone {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* .................footer.................. */
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #a8a8a8ff;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  /* ...........hr.............. */
+  hr {
+    width: auto;
+  }
 }
